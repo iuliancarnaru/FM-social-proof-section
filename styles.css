@@ -29,11 +29,30 @@ body {
   max-width: 144rem;
   margin: 0 auto;
   padding: 11.7rem 16.5rem 10rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.wrapper::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: url("./images/bg-pattern-top-desktop.svg");
+  display: block;
+}
+
+.wrapper::after {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  content: url("./images/bg-pattern-bottom-desktop.svg");
+  display: block;
 }
 
 .top {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 7.2rem;
 }
 
@@ -55,6 +74,7 @@ body {
   padding-right: 4rem;
   line-height: 2.5rem;
   letter-spacing: -0.63px;
+  font-size: 1.9rem;
 }
 
 .rating {
