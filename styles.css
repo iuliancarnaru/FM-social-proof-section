@@ -49,6 +49,20 @@ body {
   display: block;
 }
 
+@media screen and (max-width: 375px) {
+  .wrapper {
+    padding: 8.2rem 3.2rem 9.9rem;
+  }
+
+  .wrapper::before {
+    content: url("./images/bg-pattern-top-mobile.svg");
+  }
+
+  .wrapper::after {
+    content: url("./images/bg-pattern-bottom-mobile.svg");
+  }
+}
+
 .top {
   display: flex;
   justify-content: space-between;
@@ -56,8 +70,22 @@ body {
   margin-bottom: 7.2rem;
 }
 
+@media screen and (max-width: 375px) {
+  .top {
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 4.9rem;
+  }
+}
+
 .details {
   flex: 0 0 44.5rem;
+}
+
+@media screen and (max-width: 375px) {
+  .details {
+    flex: 0 1 auto;
+  }
 }
 
 .heading {
@@ -69,6 +97,15 @@ body {
   letter-spacing: -2px;
 }
 
+@media screen and (max-width: 375px) {
+  .heading {
+    font-size: 4rem;
+    line-height: 3.2rem;
+    margin-bottom: 1.7rem;
+    letter-spacing: -1.6px;
+  }
+}
+
 .text {
   color: var(--dark-grayish-magenta);
   padding-right: 4rem;
@@ -77,9 +114,24 @@ body {
   font-size: 1.9rem;
 }
 
+@media screen and (max-width: 375px) {
+  .text {
+    padding-right: 0;
+    margin-bottom: 3.9rem;
+  }
+}
+
 .rating {
   margin-top: 2.7rem;
   flex: 0 0 54rem;
+}
+
+@media screen and (max-width: 375px) {
+  .rating {
+    flex: 0 1 auto;
+    width: 100%;
+    margin-top: 0;
+  }
 }
 
 .review {
@@ -89,6 +141,13 @@ body {
   gap: 3.24rem;
   padding: 2rem 3.2rem;
   max-width: 44.5rem;
+}
+
+@media screen and (max-width: 375px) {
+  .review {
+    flex-direction: column;
+    padding: 1.5rem 0;
+  }
 }
 
 .review:not(:last-of-type) {
@@ -103,18 +162,37 @@ body {
   margin-left: 9.5rem;
 }
 
+@media screen and (max-width: 375px) {
+  :is(.review-2, .review-3) {
+    margin-left: 0;
+  }
+}
+
 .category {
   font-weight: 700;
   font-size: 1.7rem;
   line-height: 1.6rem;
   color: var(--very-dark-magenta);
 }
+@media screen and (max-width: 375px) {
+  .category {
+    margin-top: -2.5rem;
+  }
+}
 
 .cards {
   display: flex;
   align-items: flex-start;
-  gap: 3rem;
+  column-gap: 3rem;
   color: var(--white);
+}
+
+@media screen and (max-width: 375px) {
+  .cards {
+    flex-direction: column;
+    row-gap: 1.6rem;
+    column-gap: 0;
+  }
 }
 
 :is(.card-1, .card-2, .card-3) {
@@ -129,6 +207,12 @@ body {
 
 .card-3 {
   margin-top: 3.2rem;
+}
+
+@media screen and (max-width: 375px) {
+  :is(.card-2, .card-3) {
+    margin-top: 0;
+  }
 }
 
 .author {
